@@ -39,5 +39,5 @@ delete_file_on_container <- function(name){
 
   AzureStor::delete_blob(container, name, confirm = T)
 
-
+  message(paste0("The file '", name, "' has been delete!"))
 }
