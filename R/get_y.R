@@ -1,6 +1,31 @@
-
-#' Baixa um ou vários arquivos no Azure Storage
-#' @param y recebe uma string com o nome do arquivo ou NULL para baixar todos os arquivos.
+#' @title Realiza o download de um forecast pack ou todos os forecast packs
+#'
+#' @name get_y
+#'
+#' @author 4intelligence
+#'
+#' @details Realiza o download de um forecast pack, dado o nome de sua variável dependente y.
+#' Baixa apenas os arquivos que começem com o prefixo 'forecast_' na
+#' pasta \code{dest}.
+#'
+#' @param y nome da variável dependente. Utilize 'all' para baixar todos os forecast packs de uma vez.
+#' @param dest nome da pasta de destino do download.
+#'
+#' @return forecast pack da variável dependente y ou NULL caso todos os forecast packs forem baixados.
+#'
+#' @example
+#' \dontrun{
+#' # Baixando o forecast pack de uma variável dependente
+#' forecast_com_co <- get_y(y = 'com_co')
+#' # Visualização dos dados (Opcional)
+#' dplyr::glimpse(forecast_com_co)
+#'
+#' # Baixando todos os forecast packs
+#' get_y()
+#'
+#' }
+#'
+#' @export
 get_y <- function(y = 'all', dest = "forecast_packs/"){
 
     if( missing(y) || class(y) != 'character' )
