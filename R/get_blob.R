@@ -1,4 +1,28 @@
-
+#' @tilte Realiza o download de algum arquivo armazenado no blob storage.
+#'
+#' @name get_blob
+#'
+#' @author 4intelligence
+#'
+#' @details Realiza o download de um(ns) arquivo(s) em específico, dado um nome ou uma regex.
+#'
+#' @param blob_name nome do arquivo ou regex para buscar vários arquivos.
+#' @param dest pasta a ser armazenado os arquivos baixados. Deve ser um caminho para uma pasta.
+#'
+#' @return Não existe retorno para esta função
+#'
+#' @example
+#' \dontrun {
+#' # Baixando um arquivo em específico
+#' get_blob('com_co')
+#'
+#' # Baixando vários arquivos, utilizando uma expressão regular
+#' get_blob('^com_')    # Arquivos que começam com o prefixo `com_`.
+#' get_blob('.rds$')    # Arquivos em formato `.rds`.
+#' get_blob('forecast') # Arquivos que contém `forecast` em seu nome.
+#' }
+#'
+#' @export
 get_blob <- function(blob_name, dest = paste0(getwd(), '/download_data/')){
 
   if(missing(blob_name) || class(blob_name) != 'character')
@@ -41,7 +65,7 @@ get_blob <- function(blob_name, dest = paste0(getwd(), '/download_data/')){
 
     message('All files has been downloaded.')
 
-    return()
+    # return()
   }
 
   # Caso nenhum arquivo foi encontrado
@@ -63,11 +87,11 @@ get_blob <- function(blob_name, dest = paste0(getwd(), '/download_data/')){
 
     }
 
-    # Retorna o arquivo
-    path <- paste0(files$destino[1])
-    blob <- readRDS(path)
-
-    return(blob)
+    # # Retorna o arquivo
+    # path <- paste0(files$destino[1])
+    # blob <- readRDS(path)
+    #
+    # return(blob)
   }
 
   return()
