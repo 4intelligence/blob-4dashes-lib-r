@@ -11,7 +11,7 @@
 #'  `NULL` faz o upload de todos os arquivos do caminho passado em `path`.
 #' @param path pasta ou caminho do arquivo utilizado no parâmetro `pack`.
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' # Subindo todos os arquivos da pasta pack para o azuere
 #'  update_packs()

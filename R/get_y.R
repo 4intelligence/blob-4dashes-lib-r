@@ -13,7 +13,7 @@
 #'
 #' @return forecast pack da variável dependente y ou NULL caso todos os forecast packs forem baixados.
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' # Baixando o forecast pack de uma variável dependente
 #' forecast_com_co <- get_y(y = 'com_co')

@@ -1,4 +1,4 @@
-#' @tilte Realiza o download de algum arquivo armazenado no blob storage.
+#' @title Realiza o download de algum arquivo armazenado no blob storage
 #'
 #' @name get_blob
 #'
@@ -11,7 +11,7 @@
 #'
 #' @return Não existe retorno para esta função
 #'
-#' @example
+#' @examples
 #' \dontrun {
 #' # Baixando um arquivo em específico
 #' get_blob('com_co')

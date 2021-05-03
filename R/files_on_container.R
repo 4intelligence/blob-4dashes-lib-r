@@ -7,7 +7,7 @@
 #' @details Realiza a listagem de todos forecast pack contidos no blob Storage do projeto.
 #'
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' # Listando todos os arquivos do projeto contidos no blob
 #' files_on_container()

@@ -8,7 +8,7 @@
 #’
 #'@param name nome do arquivo que deve ser excluido
 #'
-#' @example
+#' @examples
 #' \dontrun {
 #' # Excluindo um arquivo do blob
 #' delete_file_on_container('com_co')
@@ -16,8 +16,6 @@
 #' }
 #'
 #' @export
-
-
 delete_file_on_container <- function(name){
 
   # Criando o endpoint
