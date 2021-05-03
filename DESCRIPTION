@@ -1,16 +1,20 @@
 Package: blob.4dashes
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Biblioteca para o acesso ao Azure Blob Storage em aplicações R
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: 4intelligence
+Maintainer: Samuel Souza (samuel@4intelligence.com.br), 
+            Thamires Pieve (thamires@4intelligence.com.br)
+Description: Esta biblioteca contém várias funções para facilitar o consumo de dados
+do azure blob storage, com o foco em aplicações R.
+    Feita para o uso nos dashes em que as bases são armazenadas no Azure, o objetivo
+é facilitar e padronizar o uso ao Blob Storage.
+License: MPL-2.0
 Encoding: UTF-8
 LazyData: true
 Imports:
 	AzureStor,
 	stringr,
 	dplyr,
-	tibble
+	tibble,
+	stringr
