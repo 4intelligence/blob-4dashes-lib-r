@@ -1,9 +1,22 @@
-#' Utilize essa função para a exclusão de um arquivo no Azure Blob Storage.
+#' @title Realiza a exclusão de um forecast pack Azure Blob Storage.
 #'
+#' @name delete_file_on_container
 #'
-#' @param name nome do arquivo que deve ser excluido
-#'   Exemplo: `dataset_flex.rds`
+#' @author 4intelligence
+#'
+#' @details Realiza a exclusão de um forecast pack indicado pelo parâmetro name no banco AzureStor.
+#’
+#'@param name nome do arquivo que deve ser excluido
+#'
+#' @example
+#' \dontrun {
+#' # Excluindo um arquivo do blob
+#' delete_file_on_container('com_co')
+#'
+#' }
+#'
 #' @export
+
 
 delete_file_on_container <- function(name){
 

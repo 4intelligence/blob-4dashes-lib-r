@@ -1,7 +1,20 @@
-#' Função utilizada para a listagem de todos os arquivos contidos no
-#' Blob Storage do projeto.
+#' @title Realiza a listagem de todos forecast pack contidos no blob Storage.
+#'
+#' @name files_on_container
+#'
+#' @author 4intelligence
+#'
+#' @details Realiza a listagem de todos forecast pack contidos no blob Storage do projeto.
+#'
+#'
+#' @example
+#' \dontrun{
+#' # Listando todos os arquivos do projeto contidos no blob
+#' files_on_container()
+#'}
 #'
 #' @return dataframe com o nome, tamanho e variável (y) dos arquivos
+#'
 #' @export
 files_on_container <- function(){
 

@@ -1,6 +1,12 @@
-#' Utilize essa função para a criação de um novo container no Azure Blob Storage.
+#' @title Realiza a criação de um container no Azure Blob Storage
+#'
+#' @name create_container
+#'
+#' @author 4intelligence
+#'
+#' @details  Utilize essa função para a criação de um novo container no Azure Blob Storage.
 #' O nome do container será o nome do projeto, utilizando a variavel de ambiente PROJECT_NAME,
-#' definida durante a execução da função generate_r_envirion.R
+#' definida durante a execução da função generate_r_envirion()
 #'
 #' É recomendável a criação de dois containers, um para DEV e outro
 #' para PROD Porém é opcional.
