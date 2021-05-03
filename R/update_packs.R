@@ -22,8 +22,6 @@
 #' @export
 update_packs <- function(pack = NULL, path = 'packs/'){
 
-    require(AzureStor)
-
     if(!is.character(path))
         stop('Invalid path!')
 
