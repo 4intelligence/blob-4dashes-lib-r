@@ -22,7 +22,7 @@ files_on_container <- function(){
     endp <- AzureStor::storage_endpoint(Sys.getenv('AZURE_URL'), key = Sys.getenv('ACCESS_KEY'))
 
     # Container
-    container <- list_storage_containers(endp)
+    container <- AzureStor::list_storage_containers(endp)
 
     project_name <- Sys.getenv('PROJECT_NAME')
 

@@ -44,12 +44,12 @@ update_packs <- function(pack = NULL, path = 'packs/'){
     endp <- AzureStor::storage_endpoint(Sys.getenv('AZURE_URL'), key = Sys.getenv('ACCESS_KEY'))
 
     # Container
-    container <- list_storage_containers(endp)
+    container <- AzureStor::list_storage_containers(endp)
 
-    if(!PROJECT_NAME %in% names(container))
+    if(!Sys.getenv('PROJECT_NAME') %in% names(container))
         stop('Project not found. Try specify an type (dev) or (prod).')
 
-    container <- container[[PROJECT_NAME]]
+    container <- container[[Sys.getenv('PROJECT_NAME')]]
 
     # Faz o upload de todos os forecast_packs
     if(is.null(pack))
