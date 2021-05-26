@@ -32,7 +32,7 @@ get_y <- function(y = 'all', dest = "forecast_packs/"){
         stop('Invalid y parameter. Use "all" for download all forecast packs or type specific name variable.')
 
     # Passando o parametro para minusculo
-    y <- stringr::str_to_lower(y)
+    # y <- stringr::str_to_lower(y)
 
     # Nome da variável no azure
     y_name <- y
