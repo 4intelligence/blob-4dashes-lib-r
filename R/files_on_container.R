@@ -47,10 +47,11 @@ files_on_container <- function(){
     files_on_container <- files_on_container %>%
         dplyr::rename("size_mb" = size) %>%
         dplyr::select(-isdir) %>%
-        dplyr::mutate(y = stringr::str_remove(name, "pack_")) %>%
-        dplyr::mutate(is_pack = ! stringr::str_detect(y, '.rds')) %>%
-        dplyr::mutate(y = ifelse(is_pack, y, NA)) %>%
-        dplyr::select(-is_pack, -blobtype) %>%
+        dplyr::mutate(y = str_replace_all(name, "forecast_[0-9]+_|.rds$", ""))
+        # dplyr::mutate(y = stringr::str_remove(name, "pack_")) %>%
+        # dplyr::mutate(is_pack = ! stringr::str_detect(y, '.rds')) %>%
+        # dplyr::mutate(y = ifelse(is_pack, y, NA)) %>%
+        dplyr::select(-blobtype) %>%
         tibble::as_tibble()
 
     return(files_on_container)
