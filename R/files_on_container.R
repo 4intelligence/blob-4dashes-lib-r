@@ -51,7 +51,7 @@ files_on_container <- function(){
         # dplyr::mutate(y = stringr::str_remove(name, "pack_")) %>%
         # dplyr::mutate(is_pack = ! stringr::str_detect(y, '.rds')) %>%
         # dplyr::mutate(y = ifelse(is_pack, y, NA)) %>%
-        dplyr::select(-blobtype) %>%
+        # dplyr::select(-blobtype) %>%
         tibble::as_tibble()
 
     return(files_on_container)
